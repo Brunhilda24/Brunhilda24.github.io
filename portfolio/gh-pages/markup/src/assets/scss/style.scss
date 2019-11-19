@@ -1,0 +1,171 @@
+body {
+  overflow-x: hidden;
+}
+
+@import "bootstrap/bootstrap";
+@import "site/preloader";
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 170px;
+  font-weight: 500;
+}
+
+header {
+  padding: 30px;
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    max-width: 120px;
+  }
+}
+
+.hero-title {
+  font-size: 140px;
+  font-weight: 900;
+  letter-spacing: -4px;
+  line-height: 125px;
+  color: #fff;
+  z-index: 1;
+}
+
+canvas {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.4;
+  width: 100%;
+  margin-left: -40px;
+  height: 90%;
+}
+
+.top-banner p {
+  padding-top: 45px;
+  font-size: 28px;
+  color: #b7b7b7;
+  font-weight: 500;
+  z-index: 1;
+
+  & span {
+    color: #fff;
+    font-weight: 900;
+  }
+}
+
+/* Nav Icon */
+
+.nav-icon span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.nav-icon:hover span:nth-child(3){
+  width: 100%;
+}
+
+.nav-icon:hover span:nth-child(2){
+  width: 100%;
+}
+
+.nav-icon span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.nav-icon span:nth-child(2) {
+  top: 7px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+  right: 0 !important;
+  width: 75%;
+}
+
+.nav-icon span:nth-child(3) {
+  top: 14px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+  width: 50%;
+  right: 0 !important;
+}
+
+/* Full Menu When Open */
+
+.full-open .nav-icon span {
+  width: 85%;
+}
+
+.full-open:hover span:nth-child(3){
+  width: 85%;
+}
+
+.full-open .nav-icon span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -2px;
+  left: 8px;
+}
+
+.full-open .nav-icon span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.full-open .nav-icon span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 16px;
+  left: 8px;
+}
+
+.nav-icon {
+  width: 30px;
+  height: 18px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.top-banner {
+  height: 100vh;
+  width: 100%;
+  padding:40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: radial-gradient(ellipse at center, rgba(44, 14, 67, 0.8) 0%, rgba(0, 8, 13, 0.9) 100%), url(https://cs4.pikabu.ru/post_img/big/2016/06/12/0/1465678822187392089.png);
+}
+
